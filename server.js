@@ -6,11 +6,11 @@ const app = express();
 app.use(
   "/",
   createProxyMiddleware({
-    target: "https://www.tiktok.com",
+    target: "https://www.youtube.com",
     changeOrigin: true,
     headers: {
       "User-Agent": "Mozilla/5.0",
-      "Referer": "https://www.tiktok.com/"
+      "Referer": "https://www.youtube.com"
     }
   })
 );
