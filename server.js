@@ -9,11 +9,14 @@ app.use(
     target: "https://www.tiktok.com",
     changeOrigin: true,
     headers: {
-      "User-Agent": "Mozilla/5.0"
+      "User-Agent": "Mozilla/5.0",
+      "Referer": "https://www.tiktok.com/"
     }
   })
 );
 
-app.listen(3000, () => {
-  console.log("Proxy running on port 3000");
+const PORT = process.env.PORT || 3000;
+
+app.listen(PORT, "0.0.0.0", () => {
+  console.log(`Proxy running on port ${PORT}`);
 });
